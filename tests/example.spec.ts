@@ -26,5 +26,5 @@ test('/auth/login/email', async ({ page, context, baseURL, request }) => {
   await expect(response.status()).toEqual(200)
 
   const responseBody = JSON.parse(await response.text())
-    console.log(responseBody)
+    console.log('Workflow is working')
 });
