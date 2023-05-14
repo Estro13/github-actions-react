@@ -27,4 +27,5 @@ test('/auth/login/email', async ({ page, context, baseURL, request }) => {
 
   const responseBody = JSON.parse(await response.text())
     console.log('Workflow is working')
+    console.log(13)
 });
