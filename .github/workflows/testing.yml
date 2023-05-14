@@ -1,7 +1,7 @@
 name: Test React App
 on: push
 jobs:
-  first_job_in_this_workflow:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get the repository code
