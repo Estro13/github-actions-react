@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main, master ]
 jobs:
-  three-test-jobs-in-one:
+  job:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
