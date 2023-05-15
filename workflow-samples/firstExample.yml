@@ -3,14 +3,14 @@ on:
   push:
     branches: [ main, master ]
 jobs:
-  three-test-jobs-in-one:
+  job:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - name: Get repository code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Install node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: Install dependencies
@@ -20,7 +20,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
       - name: Upload some files
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: playwright-report
