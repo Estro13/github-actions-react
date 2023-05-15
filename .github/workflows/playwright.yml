@@ -27,6 +27,6 @@ jobs:
           path: playwright-report/
           retention-days: 30
       - name: any step
-      - run: echo Second job "test2" was fasster
+        run: echo Second job "test2" was fasster
       - name: any step 2
-      - run: echo Second job "test2" was fasster
+        run: echo Second job "test2" was fasster
