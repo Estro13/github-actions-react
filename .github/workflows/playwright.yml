@@ -30,7 +30,6 @@ jobs:
     steps:
       - run: echo Second job "test2" was fasster
   test3:
-    needs: test
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
