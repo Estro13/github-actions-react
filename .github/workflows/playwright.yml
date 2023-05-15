@@ -25,3 +25,8 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+  test2:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Second job "test2" was faster
