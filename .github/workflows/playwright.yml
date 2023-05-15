@@ -29,4 +29,4 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - run: echo Second job "test2" was faster
+      - run: echo Second job "test2" was fasster
