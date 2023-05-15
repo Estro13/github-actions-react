@@ -24,6 +24,7 @@ jobs:
         path: playwright-report/
         retention-days: 30
   test2:
+    needs: test
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
