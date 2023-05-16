@@ -2,7 +2,7 @@ name: Print Pull Request Context(name of workflow(pipeline))
 on:
   workflow_dispatch:
   pull_request:
-      types: [opened, edited, reopened]
+      types: [opened, edited, reopened, closed]
 jobs:
   name-of-single-job:
     runs-on: ubuntu-latest
