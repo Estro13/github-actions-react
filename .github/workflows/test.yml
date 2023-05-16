@@ -15,6 +15,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Cache deps
+          uses: actions/cache@v3
+          with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm install
       - name: Install Playwright Browsers
@@ -32,3 +37,23 @@ jobs:
         run: echo Second job "test2" was fasster
       - name: any step 2
         run: echo Second job "test2" was fasster
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache deps
+          uses: actions/cache@v3
+          with:
+            path: ~/.npm
+            key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
